@@ -96,7 +96,7 @@ eliom.cmxa: ${FILES:.ml=.cmx}
 ##########
 
 %.cmo: %.ml
-	$(OCAMLC) -syntax camlp4o ${LIBS} -c $<
+	$(OCAMLC) -short-paths -syntax camlp4o ${LIBS} -c $<
 %.cmx: %.ml
 	$(OCAMLOPT) -syntax camlp4o ${LIBS} -c $<
 
